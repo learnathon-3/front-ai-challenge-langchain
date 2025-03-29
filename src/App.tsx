@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function App() {
-  const [showSolutions, setShowSolutions] = useState({});
+  const [showSolutions, setShowSolutions] = useState<{ [key: number]: boolean }>({});
 
-  const toggleSolution = (index) => {
+  const toggleSolution = (index: number) => {
     setShowSolutions((prev) => ({
       ...prev,
       [index]: !prev[index],
